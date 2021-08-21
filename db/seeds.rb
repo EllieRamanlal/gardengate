@@ -15,6 +15,8 @@ categories = [
     {name: "Trailing plants", description: "Plants with cascading foliage"}
 ]
 
+features = ["Easy care", "Low light", "Bright light", "Air purifying", "Small-sized", "Medium-sized", "Large-sized"]
+
 if User.count == 0 
     User.create(username: "Tester", email: "test@test.com", password: "password", password_confirmation: "password")
 end
@@ -23,5 +25,12 @@ if Category.count == 0
     categories.each do |category| 
         Category.create(name: category[:name], description: category[:description])
         puts "created #{category[:name]} category"
+    end 
+end
+
+if Feature.count == 0
+    features.each do |feature| 
+        Feature.create(name: feature)
+        puts "created #{feature} feature"
     end 
 end
