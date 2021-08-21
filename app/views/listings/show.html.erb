@@ -30,5 +30,14 @@
   <%= @listing.sold %>
 </p>
 
+<p>
+  <strong>Features:</strong>
+  <ul>
+    <%@listing.features.each do |feature|%>
+      <li><%=feature.name%></li>
+    <%end%>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>
