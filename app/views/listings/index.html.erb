@@ -19,7 +19,7 @@
     <% @listings.each do |listing| %>
       <tr>
         <td><%= listing.user_id %></td>
-        <td><%= listing.category_id %></td>
+        <td><%= listing.category.name %></td>
         <td><%= listing.title %></td>
         <td><%= listing.description %></td>
         <td><%= listing.price %></td>
