@@ -4,4 +4,5 @@ class Listing < ApplicationRecord
   has_many :listings_features
   has_many :features, through: :listings_features
   accepts_nested_attributes_for :listings_features
+  has_one_attached :picture
 end
