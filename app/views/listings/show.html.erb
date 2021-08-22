@@ -26,10 +26,10 @@
 
 </div>
 
-<div class="container">
-  <div class="d-flex justify-content-evenly">
-    <%= link_to "Edit", edit_listing_path(@listing.id), class: "btn btn-dark active mr-3" if current_user.id == @listing.user_id%>
-    <%=link_to "Delete", @listing, method: :delete, data: {confirm: "Are you sure?"} , class: "btn btn-secondary active mr-3" if current_user.id == @listing.user_id%>
+<div class='container'>
+  <div class ='d-flex justify-content-evenly'>
+  <%=link_to "Edit", edit_listing_path(@listing.id), class: "btn btn-dark active mr-3" if current_user.id == @listing.user_id%>
+  <%=link_to "Delete", @listing, method: :delete, data: {confirm: "Are you sure?"} , class: "btn btn-secondary active mr-3" if current_user.id == @listing.user_id%>
   </div>
 </div>
 
