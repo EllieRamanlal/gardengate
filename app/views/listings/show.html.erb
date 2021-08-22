@@ -14,7 +14,7 @@
       <p class="blockquote my-2"><%=@listing.description%></p>
 
     <%if current_user && @listing.sold == false%>
-      <button data-stripe="payment" class="btn btn-info p-3">Buy: $<%=@listing.price%></button>
+      <button data-stripe="payment" class="btn btn-info p-3">Buy: $<%=@listing.price / 100.0%></button>
     <%elsif @listing.sold == true%>
       <button class="btn btn-secondary" disabled>SOLD</button>
     <%else%>
